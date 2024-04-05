@@ -1,24 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import Dashboard from './dashboard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Yay! My React Application
-        </p>
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          React
-        </a> */}
-      </header>
-    </div>
+    <>
+      <nav className='nav'>
+      <h2 className='nav-brand'>My React Application</h2>
+        <ul className='nav-menu'>
+          <li className='nav-item'>
+            <a href='#' className='nav-link'>Dashboard</a>
+          </li>
+          <li className='nav-item'>
+            <a href='#' className='nav-link'>About</a>
+          </li>
+          <li className='nav-item'>
+            <a href='#' className='nav-link'>Skills</a>
+          </li>
+          <li className='nav-item'>
+            <a href='#' className='nav-link'>Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div style={{ backgroundColor: 'white', margin: '180px 80px' }}>
+        <Dashboard></Dashboard>
+        {/* <HashRouter>
+          <Routes>
+          <Route exact path='/' render={() => (<div><DashboardNavbar /></div>)} />
+          </Routes>
+          </HashRouter> */}
+      </div>
+    </>
   );
 }
 

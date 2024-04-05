@@ -7,6 +7,53 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+*,*::after, *::before{
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.6rem;
+}
+
+.card-center {
+  margin: auto;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: darkgray;
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  background: rgb(0,28,73);
+}
+.nav-brand{
+  text-transform: uppercase;
+  font-weight: bold;
+  align-items: center;
+  gap: 3rem;
+  color: rgb(106, 175, 247);
+}
+.nav-menu{
+  font-size: 18px;
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+  gap: 3rem;
+  color: rgb(106, 175, 247);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
