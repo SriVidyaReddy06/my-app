@@ -1,36 +1,49 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { Button, Link } from '@cloudscape-design/components';
 import './App.css';
-import Dashboard from './dashboard';
+import AboutMe from './components/AboutMe';
+import Projects from './components/Projects';
+import ContactMe from './components/ContactMe';
+import ResumeAndProfiles from './components/ResumeAndProfiles';
 
 function App() {
+  const [greeting, setGreeting] = useState("");
+
+  // useEffect to set a greeting based on the time of day
+  useEffect(() => {
+    const hours = new Date().getHours();
+    if (hours < 12) {
+      setGreeting("Good Morning");
+    } else if (hours < 18) {
+      setGreeting("Good Afternoon");
+    } else {
+      setGreeting("Good Evening");
+    }
+  }, []);
+
+  const scrollToProjects = () => {
+    document.getElementById("projects-section").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <>
-      <nav className='nav'>
-      <h2 className='nav-brand'>My React Application</h2>
-        <ul className='nav-menu'>
-          <li className='nav-item'>
-            <a href='#' className='nav-link'>Dashboard</a>
-          </li>
-          <li className='nav-item'>
-            <a href='#' className='nav-link'>About</a>
-          </li>
-          <li className='nav-item'>
-            <a href='#' className='nav-link'>Skills</a>
-          </li>
-          <li className='nav-item'>
-            <a href='#' className='nav-link'>Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <div style={{ backgroundColor: 'white', margin: '180px 80px' }}>
-        <Dashboard></Dashboard>
-        {/* <HashRouter>
-          <Routes>
-          <Route exact path='/' render={() => (<div><DashboardNavbar /></div>)} />
-          </Routes>
-          </HashRouter> */}
-      </div>
-    </>
+    <div className="App">
+      {/* Header section of the page */}
+      <header className="App-header">
+        <h1>{greeting}, I'm Sri Vidya Puttareddygari</h1>
+        <p> Software Engineer | Full Stack Developer | Graduate Research Assistant</p>
+        <Button variant="primary" onClick={scrollToProjects}>Explore My Work</Button>
+      </header>
+      {/* Individual components added for the info */}
+      <AboutMe />
+      <Projects />
+      <ResumeAndProfiles />
+      <ContactMe />
+      {/* footer section of the page */}
+      <footer>
+        <p>&copy; 2024 Sri Vidya Puttareddygari</p>
+        <Link href="mailto:srividya.puttareddy@outlook.com">Contact Me</Link>
+      </footer>
+    </div>
   );
 }
 

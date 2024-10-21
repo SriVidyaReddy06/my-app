@@ -1,0 +1,34 @@
+.contact-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 50px 0;
+  text-align: center;      /* Center everything */
+}
+
+.contact-section h2 {
+  font-size: 2em;
+  color: #00509e;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;      /* Ensure the paragraph is centered */
+}
+
+.contact-btn {
+  display: inline-block;   /* Make the button inline and centered */
+  padding: 12px 30px;
+  background-color: #00509e;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #003d7e;
+}

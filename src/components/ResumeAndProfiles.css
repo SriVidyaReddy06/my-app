@@ -1,0 +1,70 @@
+.resume-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 20px;
+  }
+  
+  .resume-card, .social-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 45%;  /* Make both cards take 45% of the width */
+  }
+  
+  .resume-card h2, .social-card h2 {
+    font-size: 1.8em;
+    color: #00509e;
+    margin-bottom: 20px;
+  }
+  
+  .resume-card p, .social-card p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .resume-btn {
+    padding: 12px 25px;
+    background-color: #00509e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .resume-btn:hover {
+    background-color: #003d7e;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #00509e;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .social-link:hover {
+    color: #003d7e;
+  }
+  
+  .social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  

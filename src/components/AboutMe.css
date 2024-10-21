@@ -1,0 +1,35 @@
+.about-section {
+  max-width: 800px;      
+  margin: 0 auto;        
+  padding: 50px 0;      
+}
+
+.about-section h2 {
+  text-align: left;     
+  font-size: 2em;
+  color: #00509e;       
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  text-align: left;     
+  line-height: 1.6;
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 20px;   
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 20px;       /* Reduce padding on smaller screens */
+    max-width: 100%;     /* Make the section take up the full width */
+  }
+
+  .about-section h2 {
+    font-size: 1.5em;    /* Adjust the heading size for smaller screens */
+  }
+
+  .about-section p {
+    font-size: 1em;      /* Reduce the paragraph font size for smaller screens */
+  }
+}
